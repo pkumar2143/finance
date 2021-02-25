@@ -19,4 +19,3 @@ def invest_return():
         print('Your final investment is worth $', fin_invest_worth, ' and LOSS is $', -ret)
     return
 
-print(invest_return())
