@@ -1,7 +1,7 @@
-# Calculate the return (profit/loss) of an investment in a stock.
+# Calculators for finding the return of certain investments
 
-
-def invest_return():
+# Suggestion: Keep track of multiple stocks and overall return.
+def stockReturn():
     initial = float(input('Initial stock price: '))
     invest = float(input('How much did you invest?: '))
     final = float(input('Final stock price: '))
@@ -19,3 +19,11 @@ def invest_return():
         print('Your final investment is worth $', fin_invest_worth, ' and LOSS is $', -ret)
     return
 
+# Incorporate additional monthly payments
+def investReturn():
+    initial = float(input('Initial investment ($): '))
+    ann_rate = float(input('Estimated annual rate of return: '))*0.01
+
+    num_years = [1,2,5,7,10,12,15,20,25,30,35,40]
+    for year in num_years:
+        print('After ',year,'year(s), your return will be $',round(initial*(1+ann_rate)**year,2))
